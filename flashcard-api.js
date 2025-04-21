@@ -16,6 +16,7 @@ const pool = new Pool({
 const app = express();
 app.use(json());
 
+app.get('/', (req, res) => {res.send('Welcome to the Flashcard API!')});
 // Create a folder
 app.post('/folders', async (req, res) => {
   const { name, description } = req.body;
